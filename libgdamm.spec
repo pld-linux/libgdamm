@@ -7,7 +7,7 @@ License:	LGPL
 Group:		Libraries
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/%{name}/1.3/%{name}-%{version}.tar.gz
 # Source0-md5:	8e1df19e7079e0c9f22a3fdde828e1f4
-BuildRequires:	gtkmm-glib-devel
+BuildRequires:	gtkmm-glib-devel >= 2.0
 BuildRequires:	libgda-devel >= 1.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -22,6 +22,8 @@ Summary:	Header files for libgdamm library
 Summary(pl):	Pliki nag³ówkowe biblioteki libgdamm
 Group:		Development/Libraries
 Requires:	%{name} = %{version}
+Requires:	gtkmm-glib-devel >= 2.0
+Requires:	libgda-devel >= 1.0
 
 %description devel
 Header files for libgdamm library.
