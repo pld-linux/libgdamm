@@ -1,14 +1,15 @@
 Summary:	C++ wrappers for libgda
 Summary(pl):	Interfejsy C++ dla libgda
 Name:		libgdamm
-Version:	1.3.0
+Version:	1.3.3
 Release:	1
 License:	LGPL
 Group:		Libraries
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/%{name}/1.3/%{name}-%{version}.tar.gz
-# Source0-md5:	8e1df19e7079e0c9f22a3fdde828e1f4
-BuildRequires:	gtkmm-glib-devel >= 2.0
-BuildRequires:	libgda-devel >= 1.0
+# Source0-md5:	88baad5580ba248d46c38f376caeaf3f
+BuildRequires:	glibmm-devel >= 2.4.1
+BuildRequires:	libgda-devel >= 1.1.3
+BuildRequires:	perl-base
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -21,9 +22,9 @@ Interfejsy C++ dla libgda.
 Summary:	Header files for libgdamm library
 Summary(pl):	Pliki nag³ówkowe biblioteki libgdamm
 Group:		Development/Libraries
-Requires:	%{name} = %{version}
-Requires:	gtkmm-glib-devel >= 2.0
-Requires:	libgda-devel >= 1.0
+Requires:	%{name} = %{version}-%{release}
+Requires:	glibmm-devel >= 2.4.1
+Requires:	libgda-devel >= 1.1.3
 
 %description devel
 Header files for libgdamm library.
@@ -35,7 +36,7 @@ Pliki nag³ówkowe biblioteki libgdamm.
 Summary:	Static libgdamm library
 Summary(pl):	Statyczna biblioteka libgdamm
 Group:		Development/Libraries
-Requires:	%{name}-devel = %{version}
+Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
 Static libgdamm library.
