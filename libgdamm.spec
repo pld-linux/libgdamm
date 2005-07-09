@@ -53,7 +53,7 @@ Statyczna biblioteka libgdamm.
 
 %build
 %configure \
-	%{?with_static_libs:--enable-static=no}
+	%{?with_static_libs:--enable-static=yes}
 
 %{__make}
 
