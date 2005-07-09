@@ -1,3 +1,7 @@
+#
+# Conditional build:
+%bcond_without	static_libs # don't build static library
+#
 Summary:	C++ wrappers for libgda
 Summary(pl):	Interfejsy C++ dla libgda
 Name:		libgdamm
@@ -49,7 +53,7 @@ Statyczna biblioteka libgdamm.
 
 %build
 %configure \
-	--enable-static
+	%{?with_static_libs:--enable-static=no}
 
 %{__make}
 
@@ -78,6 +82,8 @@ rm -rf $RPM_BUILD_ROOT
 %{_includedir}/*
 %{_pkgconfigdir}/*.pc
 
+%if %{with static_libs}
 %files static
 %defattr(644,root,root,755)
 %{_libdir}/lib*.a
+%endif
