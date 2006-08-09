@@ -6,13 +6,13 @@ Summary:	C++ wrappers for libgda
 Summary(pl):	Interfejsy C++ dla libgda
 Name:		libgdamm
 Version:	1.3.7
-Release:	2
+Release:	3
 License:	LGPL
 Group:		Libraries
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/libgdamm/1.3/%{name}-%{version}.tar.gz
 # Source0-md5:	1983066281586eec6a6a5cc13adedf4d
 BuildRequires:	glibmm-devel >= 2.4.4
-BuildRequires:	libgda-devel >= 1.2.0
+BuildRequires:	libgda-devel >= 1:1.2.3
 BuildRequires:	perl-base
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -28,7 +28,7 @@ Summary(pl):	Pliki nag³ówkowe biblioteki libgdamm
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	glibmm-devel >= 2.4.4
-Requires:	libgda-devel >= 1.2.0
+Requires:	libgda-devel >= 1:1.2.3
 
 %description devel
 Header files for libgdamm library.
