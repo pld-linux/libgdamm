@@ -3,7 +3,7 @@
 %bcond_without	static_libs # don't build static library
 #
 Summary:	C++ wrappers for libgda
-Summary(pl.UTF-8):   Interfejsy C++ dla libgda
+Summary(pl.UTF-8):	Interfejsy C++ dla libgda
 Name:		libgdamm
 Version:	1.3.7
 Release:	3
@@ -24,7 +24,7 @@ Interfejsy C++ dla libgda.
 
 %package devel
 Summary:	Header files for libgdamm library
-Summary(pl.UTF-8):   Pliki nagłówkowe biblioteki libgdamm
+Summary(pl.UTF-8):	Pliki nagłówkowe biblioteki libgdamm
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	glibmm-devel >= 2.11.3
@@ -38,7 +38,7 @@ Pliki nagłówkowe biblioteki libgdamm.
 
 %package static
 Summary:	Static libgdamm library
-Summary(pl.UTF-8):   Statyczna biblioteka libgdamm
+Summary(pl.UTF-8):	Statyczna biblioteka libgdamm
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
