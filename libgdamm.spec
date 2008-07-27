@@ -6,7 +6,7 @@ Summary:	C++ wrappers for libgda
 Summary(pl.UTF-8):	Interfejsy C++ dla libgda
 Name:		libgdamm
 Version:	1.3.7
-Release:	3
+Release:	4
 License:	LGPL
 Group:		Libraries
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/libgdamm/1.3/%{name}-%{version}.tar.gz
