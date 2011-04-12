@@ -6,7 +6,7 @@ Summary:	C++ wrappers for libgda
 Summary(pl.UTF-8):	Interfejsy C++ dla libgda
 Name:		libgdamm
 Version:	1.3.7
-Release:	4
+Release:	5
 License:	LGPL
 Group:		Libraries
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/libgdamm/1.3/%{name}-%{version}.tar.gz
@@ -63,6 +63,8 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
+%{__rm} $RPM_BUILD_ROOT%{_libdir}/lib*.la
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
@@ -72,18 +74,18 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog NEWS
-%attr(755,root,root) %{_libdir}/lib*.so.*.*.*
+%attr(755,root,root) %{_libdir}/libgdamm-1.3.so.*.*.*
+%attr(755,root,root) %ghost %{_libdir}/libgdamm-1.3.so.8
 
 %files devel
 %defattr(644,root,root,755)
-%attr(755,root,root) %{_libdir}/lib*.so
-%{_libdir}/lib*.la
+%attr(755,root,root) %{_libdir}/libgdamm-1.3.so
 %{_libdir}/libgdamm-2.0
-%{_includedir}/*
-%{_pkgconfigdir}/*.pc
+%{_includedir}/libgdamm-2.0
+%{_pkgconfigdir}/libgdamm-2.0.pc
 
 %if %{with static_libs}
 %files static
 %defattr(644,root,root,755)
-%{_libdir}/lib*.a
+%{_libdir}/libgdamm-1.3.a
 %endif
